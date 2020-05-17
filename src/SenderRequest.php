@@ -5,6 +5,7 @@ namespace CodeBot;
 class SenderRequest
 {
     private $event;
+
     public function __construct()
     {
         $event = file_get_contents("php://input");
@@ -22,16 +23,14 @@ class SenderRequest
         return $this->event['message']['text'] ?? null;
     }
 
-    public function getPostBack()
+    public function getPostback()
     {
         if (empty($this->event['postback'])) {
             return null;
         }
-
         if (is_array($this->event['postback']) and !empty($this->event['postback']['payload'])) {
             return $this->event['postback']['payload'];
         }
-
         return $this->event['postback'];
     }
 

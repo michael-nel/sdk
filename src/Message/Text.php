@@ -5,6 +5,7 @@ namespace CodeBot\Message;
 class Text implements Message
 {
     private $recipientId;
+
     public function __construct(string $recipientId)
     {
         $this->recipientId = $recipientId;
@@ -12,9 +13,13 @@ class Text implements Message
     public function message(string $messageText): array
     {
         return [
-            'recipient' => ['id' => 1],
-            'message' > ['text' => 'Oiiii',
-                'metadata' => 'DEVELOPER_DFINED_METADATA'],
+            'recipient' => [
+                'id' => $this->recipientId,
+            ],
+            'message' => [
+                'text' => $messageText,
+                'metadata' => 'DEVELOPER_DEFINED_METADATA',
+            ],
         ];
     }
 }
