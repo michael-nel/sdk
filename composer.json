@@ -1,0 +1,19 @@
+{
+    "name": "michael-nel/facebook-bot-sdk",
+    "description": "Chat Bot Facebook",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Michael Nel",
+        "email": "neckware@gmail.com"
+    }],
+    "require": {
+        "phpunit/phpunit": "^8.5",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeBot\\": "src"
+        }
+    }
+}
