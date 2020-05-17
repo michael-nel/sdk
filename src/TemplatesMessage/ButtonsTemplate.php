@@ -3,9 +3,8 @@
 namespace CodeBot\TemplatesMessage;
 
 use CodeBot\Element\ElementInterface;
-use CodeBot\Message\Message;
 
-class ButtonsTemplate implements Message
+class ButtonsTemplate implements TemplateInterface
 {
     protected $buttons = [];
     protected $recipientId;
