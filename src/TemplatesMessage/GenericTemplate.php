@@ -2,6 +2,8 @@
 
 namespace CodeBot\TemplatesMessage;
 
+use CodeBot\Element\ElementInterface;
+
 class GenericTemplate implements TemplateInterface
 {
     protected $products = [];

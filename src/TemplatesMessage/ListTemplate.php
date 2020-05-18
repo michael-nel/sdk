@@ -2,6 +2,8 @@
 
 namespace CodeBot\TemplatesMessage;
 
+use CodeBot\Element\ElementInterface;
+
 class ListTemplate implements TemplateInterface
 {
     protected $products = [];
