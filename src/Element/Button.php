@@ -9,7 +9,7 @@ class Button implements ElementInterface
     private $value;
     private $config;
 
-    public function __construct(string $type, ?string $title = null, ?string $value = null, array $config = [])
+    public function __construct(string $type, ? string $title = null, ? string $value = null, array $config = [])
     {
         $this->type = $type;
         $this->title = $title;
@@ -17,10 +17,10 @@ class Button implements ElementInterface
         $this->config = $config;
     }
 
-    public function get(): array
+    public function get() :array
     {
         $data = [
-            'type' => $this->type,
+            'type' => $this->type
         ];
 
         if ($this->title !== null) {
@@ -44,5 +44,4 @@ class Button implements ElementInterface
 
         return array_merge($data, $this->config);
     }
-
 }

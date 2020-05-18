@@ -19,21 +19,21 @@ class ListTemplate implements TemplateInterface
         $this->products[] = $element->get();
     }
 
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id' => $this->recipientId
             ],
             'message' => [
                 'attachment' => [
                     'type' => 'template',
                     'payload' => [
                         'template_type' => 'list',
-                        'elements' => $this->products,
-                    ],
-                ],
-            ],
+                        'elements' => $this->products
+                    ]
+                ]
+            ]
         ];
     }
 

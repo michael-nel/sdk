@@ -19,11 +19,11 @@ class ButtonsTemplate implements TemplateInterface
         $this->buttons[] = $element->get();
     }
 
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id' => $this->recipientId
             ],
             'message' => [
                 'attachment' => [
@@ -31,11 +31,10 @@ class ButtonsTemplate implements TemplateInterface
                     'payload' => [
                         'template_type' => 'button',
                         'text' => $messageText,
-                        'buttons' => $this->buttons,
-                    ],
-                ],
-            ],
+                        'buttons' => $this->buttons
+                    ]
+                ]
+            ]
         ];
     }
-
 }

@@ -13,6 +13,15 @@ class ProductOrder implements ElementInterface
     private $currency;
     private $image_url;
 
+    /**
+     * ProductOrder constructor.
+     * @param $title
+     * @param $subtitle
+     * @param $quantity
+     * @param $price
+     * @param $currency
+     * @param $image_url
+     */
     public function __construct(string $title, string $subtitle, ? int $quantity = null, float $price = 0, ? string $currency = null, string $image_url = null)
     {
         $this->title = $title;

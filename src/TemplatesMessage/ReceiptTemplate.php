@@ -2,6 +2,8 @@
 
 namespace CodeBot\TemplatesMessage;
 
+use CodeBot\Element\ElementInterface;
+
 class ReceiptTemplate implements TemplateInterface
 {
     protected $products = [];
@@ -41,15 +43,15 @@ class ReceiptTemplate implements TemplateInterface
             'city' => $city,
             'postal_code,' => $postal_code,
             'state' => $state,
-            'country' => $country,
+            'country' => $country
         ];
     }
 
     public function setAdjustments(string $name, float $amount)
     {
         $this->adjustments[] = [
-            'name' => $name,
-            'amount' => $amount,
+            'name'=>$name,
+            'amount'=>$amount
         ];
     }
 
@@ -63,7 +65,7 @@ class ReceiptTemplate implements TemplateInterface
         ];
     }
 
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         if ($this->orderInfo !== null) {
             throw new \Exception('orderInfo is required');
@@ -75,7 +77,7 @@ class ReceiptTemplate implements TemplateInterface
 
         $result = [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id'=>$this->recipientId
             ],
             'message' => [
                 'attachment' => [
@@ -91,9 +93,9 @@ class ReceiptTemplate implements TemplateInterface
                         'timestamp' => $this->orderInfo['timestamp'],
                         'elements' => $this->products,
                         'summary' => $this->summary,
-                    ],
-                ],
-            ],
+                    ]
+                ]
+            ]
         ];
 
         if ($this->address !== null) {
@@ -106,5 +108,4 @@ class ReceiptTemplate implements TemplateInterface
 
         return $result;
     }
-
 }

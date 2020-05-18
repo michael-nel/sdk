@@ -19,22 +19,21 @@ class GenericTemplate implements TemplateInterface
         $this->products[] = $element->get();
     }
 
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id' => $this->recipientId
             ],
             'message' => [
                 'attachment' => [
                     'type' => 'template',
                     'payload' => [
-                        'template_type' => 'generic',
-                        'elements' => $this->products,
-                    ],
-                ],
-            ],
+                        'template_type' => 'list',
+                        'elements' => $this->products
+                    ]
+                ]
+            ]
         ];
     }
-
 }
