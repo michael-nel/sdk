@@ -2,10 +2,10 @@
 
 namespace CodeBot\TemplatesMessage;
 
-use CodeBot\Element\Button;
 use PHPUnit\Framework\TestCase;
+use CodeBot\Element\Button;
 
-class ButtonTemplateTest extends TestCase
+class ButtonsTemplateTest extends TestCase
 {
     public function testRetornoComTipoPostback()
     {
@@ -15,7 +15,7 @@ class ButtonTemplateTest extends TestCase
 
         $expected = [
             'recipient' => [
-                'id' => 1234,
+                'id' => 1234
             ],
             'message' => [
                 'attachment' => [
@@ -28,12 +28,13 @@ class ButtonTemplateTest extends TestCase
                                 'type' => 'postback',
                                 'title' => 'Que tal uma resposta do bot',
                                 'payload' => 'resposta',
-                            ],
-                        ],
-                    ],
-                ],
-            ],
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ];
+
         $this->assertEquals($expected, $actual);
     }
 }

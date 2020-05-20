@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CodeBot\TemplatesMessage;
 
 use CodeBot\Element\Button;

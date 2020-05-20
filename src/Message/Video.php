@@ -10,20 +10,20 @@ class Video implements Message
     {
         $this->recipientId = $recipientId;
     }
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id'=>$this->recipientId
             ],
             'message' => [
                 'attachment' => [
                     'type' => 'video',
                     'payload' => [
-                        'url' => $messageText,
-                    ],
-                ],
-            ],
+                        'url' => $messageText
+                    ]
+                ]
+            ]
         ];
     }
 }

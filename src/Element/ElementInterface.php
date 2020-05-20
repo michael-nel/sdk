@@ -4,5 +4,5 @@ namespace CodeBot\Element;
 
 interface ElementInterface
 {
-    public function get(): array;
+    public function get() :array;
 }

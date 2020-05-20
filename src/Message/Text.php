@@ -10,16 +10,16 @@ class Text implements Message
     {
         $this->recipientId = $recipientId;
     }
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
             'recipient' => [
-                'id' => $this->recipientId,
+                'id'=>$this->recipientId
             ],
             'message' => [
                 'text' => $messageText,
-                'metadata' => 'DEVELOPER_DEFINED_METADATA',
-            ],
+                'metadata' => 'DEVELOPER_DEFINED_METADATA'
+            ]
         ];
     }
 }

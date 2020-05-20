@@ -1,7 +1,7 @@
 <?php
 
-
 namespace CodeBot\TemplatesMessage;
+
 use CodeBot\Element\Button;
 use CodeBot\Element\Product;
 use PHPUnit\Framework\TestCase;
@@ -54,6 +54,7 @@ class ListTemplateTest extends TestCase
                 ]
             ]
         ];
+
         $this->assertEquals($expected, $actual);
     }
 }

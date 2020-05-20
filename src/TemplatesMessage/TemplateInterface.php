@@ -2,8 +2,8 @@
 
 namespace CodeBot\TemplatesMessage;
 
-use CodeBot\Element\ElementInterface;
 use CodeBot\Message\Message;
+use CodeBot\Element\ElementInterface;
 
 interface TemplateInterface extends Message
 {

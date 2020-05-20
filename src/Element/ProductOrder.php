@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CodeBot\Element;
-
 
 class ProductOrder implements ElementInterface
 {

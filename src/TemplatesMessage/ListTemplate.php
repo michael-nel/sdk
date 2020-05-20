@@ -36,5 +36,4 @@ class ListTemplate implements TemplateInterface
             ]
         ];
     }
-
 }

@@ -1,15 +1,19 @@
 {
-    "name": "michael-nel/facebook-bot-sdk",
-    "description": "Chat Bot Facebook",
+    "name": "erikfig/code-facebook-bot-sdk",
     "type": "library",
     "license": "MIT",
-    "authors": [{
-        "name": "Michael Nel",
-        "email": "neckware@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Erik Figueiredo",
+            "email": "erik.figueiredo@gmail.com"
+        }
+    ],
     "require": {
-        "phpunit/phpunit": "^8.5",
-        "guzzlehttp/guzzle": "^6.5"
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
     },
     "autoload": {
         "psr-4": {

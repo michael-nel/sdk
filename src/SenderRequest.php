@@ -33,5 +33,4 @@ class SenderRequest
         }
         return $this->event['postback'];
     }
-
 }
