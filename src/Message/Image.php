@@ -2,7 +2,7 @@
 
 namespace CodeBot\Message;
 
-class Image implements Message
+class   Image implements Message
 {
     private $recipientId;
     public function __construct(string $recipientId)
@@ -12,7 +12,9 @@ class Image implements Message
     public function message(string $messageText): array
     {
         return [
-            'recipient' => ['id' => 1],
+            'recipient' => [
+                'id'=>$this->recipientId
+            ],
             'message' > ['file' => [
                 'type' => 'image',
                 'payload' => [

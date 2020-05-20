@@ -9,17 +9,20 @@ class Audio implements Message
     {
         $this->recipientId = $recipientId;
     }
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
-            'recipient' => ['id' => 1],
-            'message' > ['attachment' => [
-                'type' => 'audio',
-                'payload' => [
-                    'url' => $messageText,
-                ],
+            'recipient' => [
+                'id'=>$this->recipientId
             ],
-            ],
+            'message' => [
+                'attachment' => [
+                    'type' => 'audio',
+                    'payload' => [
+                        'url' => $messageText
+                    ]
+                ]
+            ]
         ];
     }
 }

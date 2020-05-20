@@ -9,17 +9,20 @@ class File implements Message
     {
         $this->recipientId = $recipientId;
     }
-    public function message(string $messageText): array
+    public function message(string $messageText) :array
     {
         return [
-            'recipient' => ['id' => 1],
-            'message' > ['file' => [
-                'type' => 'audio',
-                'payload' => [
-                    'url' => $messageText,
-                ],
+            'recipient' => [
+                'id'=>$this->recipientId
             ],
-            ],
+            'message' => [
+                'attachment' => [
+                    'type' => 'file',
+                    'payload' => [
+                        'url' => $messageText
+                    ]
+                ]
+            ]
         ];
     }
 }
